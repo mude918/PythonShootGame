@@ -189,7 +189,9 @@ text_rect.centery = screen.get_rect().centery + 24
 screen.blit(game_over, (0, 0))
 screen.blit(text, text_rect)
 
-while 1:
+while True:
+    # 控制游戏最大帧率为60
+    clock.tick(60)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
